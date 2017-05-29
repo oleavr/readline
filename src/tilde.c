@@ -19,6 +19,8 @@
    along with Readline.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#define READLINE_LIBRARY
+
 #if defined (HAVE_CONFIG_H)
 #  include <config.h>
 #endif

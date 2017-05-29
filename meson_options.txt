@@ -1,0 +1,2 @@
+option('enable_multibyte', type: 'boolean', description: 'enable multibyte characters if OS supports them', value: true)
+option('with-curses', type: 'boolean', description: 'use the curses library instead of the termcap library', value: false)
