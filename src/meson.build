@@ -53,7 +53,12 @@ readline_dep = declare_dependency(
   include_directories: [readline_parent_incdir],
   link_with: readline,
 )
-if libtype != 'static'
+if libtype == 'static'
+  readline_static_dep = declare_dependency(
+    include_directories: [readline_parent_incdir],
+    link_with: readline,
+  )
+else
   readline_static = static_library('readline', readline_sources,
     include_directories: [root_incdir, readline_incdir, readline_parent_incdir],
     install: true,
@@ -84,7 +89,12 @@ history_dep = declare_dependency(
   include_directories: [readline_parent_incdir],
   link_with: history,
 )
-if libtype != 'static'
+if libtype == 'static'
+  history_static_dep = declare_dependency(
+    include_directories: [readline_parent_incdir],
+    link_with: history,
+  )
+else
   history_static = static_library('history', history_sources,
     include_directories: [root_incdir, readline_incdir, readline_parent_incdir],
     install: true,
